@@ -14,3 +14,62 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+	font-family: 'Work Sans', sans-serif;
+}
+
+nav.navbar {
+	background-color: rgb(5, 60, 98);
+	
+	a.navbar-brand{
+	color: rgb(255, 255, 255);
+	}
+	a.navbar-brand:hover{
+	color: white;
+	}
+	a.dropdown-toggle {
+	color: rgb(255, 255, 255);
+	}
+	a.dropdown-toggle:hover {
+	color: white;
+	text-decoration: underline;
+	}
+	ul.navbar-nav {
+	a {
+	color: rgb(255, 255, 255);
+	}
+	}
+	ul.navbar-nav {
+	a:hover {
+	color: rgb(255, 255, 255);
+	}
+	}
+	ul.dropdown-menu {
+	a {
+	color: black;
+    }
+	}
+	ul.dropdown-menu {
+	a:hover {
+	color: black;
+    }
+	}
+}
+
+div.well {
+	background-color: white;
+}
+
+div.jumbotron {
+	background-color: rgb(5, 60, 98);
+	h2 {
+		color: white;
+	}
+	p {
+		color:white;
+	}
+}
+
+
+

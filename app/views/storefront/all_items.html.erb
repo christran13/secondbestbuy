@@ -1,55 +1,6 @@
 <div class="jumbotron">
-<h3>Welcome to SecondBest Buy</h3>
-<p>All of our products are almost as good as Best Buy.</p>
+<h2>Welcome to SecondBest Buy</h2>
+<p><i>All of our products are almost as good as Best Buy.</i></p>
 </div>
 
-<div class="row">
-	<% @products.each do |product| %>
-	<div class="col-sm-6 col-md-4">
-		<div class="well text-center">
-			<center>
-			<% if product.image.presence %>
-			<p><%= image_tag product.image, class: "img-responsive", style: "height: 200px; max-width: 100%;" %></p>
-			<% end %>
-		    </center>
-			<h3><%= link_to product.name, product %></h3>
-			<p><%= number_to_currency product.price %></p>
-			<p>
-				<a href= "#" data-toggle="modal" data-target="#myModal_<%= product.id %>">
-					<span class="glyphicon glyphicon-plus"></span> Quick Info
-				</a>
-			</p>
-		</div>
-	</div>
-	<!-- Modal -->
-<div class="modal fade" id="myModal_<%= product.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel"><%= product.name %></h4>
-      </div>
-      <div class="modal-body">
-        <% if product.image.presence %>
-        	<center>
-        	<p><%= image_tag product.image.url, size: 250, class: "img-responsive" %></p>
-        	</center>
-        <% end %>
-        	<p>Made by: <%= product.brand %></p>
-        	<p>Rating: <%= product.rating %></p>
-        	<p>Category: <%= product.category.name %></p>
-        	<p>Description: <%= product.description %></p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-	<% end %>
-</div>
-
-
-<br>
-<br>
+<%= render 'products_partial' %>
