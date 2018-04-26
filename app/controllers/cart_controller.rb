@@ -37,6 +37,7 @@ before_action :authenticate_user!, only: [:checkout]
   def checkout
 
   	line_items = current_order.line_items
+    @order = current_order
   	@order.update(user_id: current_user.id, subtotal: 0)
 
   	line_items.each do |line_item|
@@ -78,7 +79,7 @@ before_action :authenticate_user!, only: [:checkout]
 
     session.delete(:order_id)
     line_items.destroy_all
-    
+
   rescue Stripe::CardError => e
     flash[:error] = e.message
     redirect_to root_path
