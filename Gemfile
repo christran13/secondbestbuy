@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 gem 'stripe'
 gem 'figaro'
 gem 'bootstrap-sass'
