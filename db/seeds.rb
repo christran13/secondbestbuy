@@ -22,5 +22,4 @@ puts "Categories seeded!"
 	  	category_id: Faker::Number.between(1,Category.count),
    )
 end
-
-# This is my contribution
+# This is my comment 
