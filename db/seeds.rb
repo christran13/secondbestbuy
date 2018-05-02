@@ -11,14 +11,16 @@ Category.create([{name: "Computers"}, {name:'Televisions'}, {name: 'Smart Phones
 puts "Categories seeded!"
 
 
-50.times do 
+50.times do
 	Product.create(
-	  	name: Faker::Name.name, 
-	  	price: Faker::Commerce.price, 
+	  	name: Faker::Name.name,
+	  	price: Faker::Commerce.price,
 	  	quantity: Faker::Number.number(5),
-	  	description: Faker::Lorem.sentence, 
-	  	brand: Faker::Company.name, 
+	  	description: Faker::Lorem.sentence,
+	  	brand: Faker::Company.name,
 	  	rating: Faker::Number.between(1,10),
 	  	category_id: Faker::Number.between(1,Category.count),
    )
-end 
+end
+
+# This is my contribution
